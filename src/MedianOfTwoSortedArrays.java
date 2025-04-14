@@ -9,16 +9,16 @@ public class MedianOfTwoSortedArrays {
         double median;
         int m = nums1.length;
         int n = nums2.length;
-        int[] arr = new int[m + n]; int l= arr.length; int k = 0;
-        for(int i=0;i<m;i++){ arr[k]=nums1[i]; k++; }
+        int[] arr = new int[m + n]; int l= arr.length; int k = 0;   //Declaring our variables;
+        for(int i=0;i<m;i++){ arr[k]=nums1[i]; k++; }               //With for loops we merge our sorted arrays into one new array
         for(int i=0;i<n;i++){ arr[k]=nums2[i]; k++; }
-        Arrays.sort(arr);
-        if(l%2==0){
+        Arrays.sort(arr);                                           //We sort our new Array with .sort() method (which is from Java Arrays class.
+        if(l%2==0){                                                 //We check here if remaining from dividing by 2 is 0 or not if it is 0 we get the sum of 2 numbers at middle and divide them
             double a=Double.valueOf(arr[(l-1)/2]);
             double b=Double.valueOf(arr[((l-1)/2)+1]);
-            median = (Double.valueOf(arr[(l-1)/2])+Double.valueOf(arr[((l-1)/2)+1]))/2;
+            median = (a+b)/2;
         }
-        else{ median=Double.valueOf(arr[((l-1)/2)]); }
+        else{ median=Double.valueOf(arr[((l-1)/2)]); }              //If it is not 0, we directly get the value of the character at the middle
         return median;
     }
 }
