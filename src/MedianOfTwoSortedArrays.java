@@ -5,7 +5,7 @@ public class MedianOfTwoSortedArrays {
         int[] nums2={2};
         System.out.println(findMedianSortedArrays(nums1,nums2));
     }
-    public static double findMedianSortedArrays(int[] nums1,int[] nums2) {
+    public static double findMedianSortedArrays(int[] nums1,int[] nums2) {   //Purpose of the code = Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays!!!
         double median;
         int m = nums1.length;
         int n = nums2.length;

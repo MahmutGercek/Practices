@@ -3,7 +3,7 @@ class LongestSubstring {
     public static void main(String[] args){
         System.out.println(longest_substring("Turkey"));
     }
-    public static int longest_substring(String s) {
+    public static int longest_substring(String s) {    //Purpose of the code = Given a string s, find the length of the longest substring without duplicate characters!!!
         int l = s.length();
         int maxlength= 0;
         ArrayList<Character> counter= new ArrayList<>();
