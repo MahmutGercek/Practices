@@ -1,17 +1,18 @@
 import java.util.Arrays;
+import java.util.HashMap;
 public class TwoSum {
     public static void main(String[] args) {
-        int[] numbers = {15,11,2,7};
-        int target = 9;
-        System.out.println(Arrays.toString(twoSum(numbers,target)));
+        int[] numbers = {2,7,11,3};
+        System.out.println(Arrays.toString(twoSum(numbers, 9)));
     }
-    public static int[] twoSum(int[] numbers, int target){
-        for(int i=0; i<numbers.length; i++){
-            for(int j=i+1; j<numbers.length; j++){
-                if(numbers[i]+numbers[j]==target){
-                    return new int[]{i,j};
-                }
+    public static int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> check = new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            int completer = target-nums[i];
+            if(check.containsKey(completer)){
+                return new int[]{check.get(completer),i};
             }
+            check.put(nums[i],i);
         }
         return new int[]{};
     }
